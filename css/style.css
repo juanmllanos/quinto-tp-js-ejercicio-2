@@ -8,6 +8,10 @@ td {
 	border: 1px #000000 solid
 }
 
+form {
+	margin: 100px;
+}
+
 @media screen and (min-width: 700px) {
 	table {
 		display: inline-block;

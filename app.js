@@ -141,7 +141,7 @@ function mostrarPersonas(arreglo) {
 
 	for (let i = 0; i < arreglo.length; i++) {
 		const contenedorPersona = document.createElement('div');
-		contenedorPersona.classList = `d-flex justify-content-around px-4 my-2`
+		contenedorPersona.classList = `d-flex justify-content-between px-4 my-2`
 
 		const nuevaPersona = document.createElement('p');
 		nuevaPersona.innerHTML = `${(arreglo[i].nombre)}`;
@@ -149,13 +149,13 @@ function mostrarPersonas(arreglo) {
 
 		const botonMayorDeEdad = document.createElement('button');
 		botonMayorDeEdad.innerHTML = `Edad?`;
-		botonMayorDeEdad.className = `persona mx-auto col-4 col-md-3`;
+		botonMayorDeEdad.className = `persona btn btn-info mx-auto col-4 col-md-3 col-lg-2`;
 		botonMayorDeEdad.onclick = function () {
 			alert(`${arreglo[i].nombre} es ${arreglo[i].esMayorDeEdad().innerHTML}`);
 		};
 		const botongeneracion = document.createElement('button');
 		botongeneracion.innerHTML = `Generacion`;
-		botongeneracion.className = `persona col-4 col-md-3`;
+		botongeneracion.className = `persona btn btn-info col-4 col-md-3 col-lg-2`;
 		botongeneracion.onclick = function () {
 			alert(`La generacion de ${arreglo[i].nombre} es "${arreglo[i].generacion().innerHTML}"`);
 		};
@@ -167,8 +167,6 @@ function mostrarPersonas(arreglo) {
 	};
 };
 
-/* $nombreJuan[0].innerHTML = `${juan.nombre}`;
-$nombreJuan[1].innerHTML = `${juan.nombre}`; */
 $nombreJuan.forEach(elemento => elemento.innerHTML = `${juan.nombre}`);
 $edadJuan.forEach(elemento => elemento.innerHTML = `${juan.edad}`);
 $sexoJuan.forEach(elemento => elemento.innerHTML = `${juan.sexo}`);
